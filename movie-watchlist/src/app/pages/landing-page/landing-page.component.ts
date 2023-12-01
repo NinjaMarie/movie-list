@@ -11,7 +11,10 @@ export class LandingPageComponent implements OnInit{
   movieData: Imovie|undefined
   ngOnInit(): void {
    this.movieData = mockMovieData
-   console.log('data', mockMovieData)
+  }
+
+  onCardClicked(){
+    console.log('Card is Clicked')
   }
 
 

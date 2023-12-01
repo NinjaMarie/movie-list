@@ -1,1 +1,35 @@
-<app-movie-card [data]="movieData"></app-movie-card>
+<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Movie Night</span>
+  </div>
+</nav>
+<div fxFlexLayout="row" fxGap="10px">
+
+    <app-movie-card
+      [routerLink]="'avengers'"
+      [imageSource]="'assets/pictures/Avengers.png'"
+      [data]="movieData"
+    ></app-movie-card>
+
+
+  <app-movie-card
+    [routerLink]="'avengers'"
+    [imageSource]="'assets/pictures/Guardians of The Galaxy.png'"
+    [data]="movieData"
+  ></app-movie-card>
+  <app-movie-card
+    [routerLink]="'avengers'"
+    [imageSource]="'assets/pictures/Knives Out.png'"
+    [data]="movieData"
+  ></app-movie-card>
+  <app-movie-card
+    [routerLink]="'avengers'"
+    [imageSource]="'assets/pictures/Spider Man.png'"
+    [data]="movieData"
+  ></app-movie-card>
+  <app-movie-card
+    [routerLink]="'avengers'"
+    [imageSource]="'assets/pictures/Tenet.png'"
+    [data]="movieData"
+  ></app-movie-card>
+</div>

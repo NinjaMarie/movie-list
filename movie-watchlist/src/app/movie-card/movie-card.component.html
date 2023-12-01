@@ -1,20 +1,23 @@
-<div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <div><a class="title"> {{ data?.title }}</a></div>
+<div class="card" >
+  <img [src]="imageSource" class="card-img-top" alt="movie-picture" />
+  <div class="card-body">
+    <Label class="title"> {{ data?.title }}</Label>
 
-      <Label class="label"> Description </Label>
-      <p class="card-text"> {{ data?.description }}</p>
+    <Label class="label"> Description </Label>
+    <p class="card-text">{{ data?.description }}</p>
 
-      <Label class="label"> Genre </Label>
-      <p class="card-text"> {{ data?.genre }}</p>
-      
-      <Label class="label"> Duration </Label>
-      <p class="card-text"> {{ data?.duration }}</p>
+    <Label class="label"> Genre </Label>
+    <p class="card-text">{{ data?.genre }}</p>
 
-      <Label class="label"> Rating </Label>
-      <p class="card-text"> {{ data?.rating }}</p>
+    <Label class="label"> Duration </Label>
+    <p class="card-text">{{ data?.duration }}</p>
 
-      <Label class="label"> Released Date </Label>
-      <p class="card-text"> {{ data?.releasedDate }}</p>
-    </div>
+    <Label class="label"> Rating </Label>
+    <p class="card-text">{{ data?.rating }}</p>
+
+    <Label class="label"> Released Date </Label>
+    <p class="card-text">{{ data?.releasedDate }}</p>
+
+    <a [routerLink]="routerLink" class="btn btn-outline-success">Show More</a>
   </div>
+</div>

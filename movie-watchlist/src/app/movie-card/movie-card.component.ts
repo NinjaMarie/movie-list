@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Imovie } from '../model/movie-model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-card',
@@ -7,6 +8,10 @@ import { Imovie } from '../model/movie-model';
   styleUrls: ['./movie-card.component.css']
 })
 export class MovieCardComponent {
-  @Input() data: Imovie | undefined 
+  @Input() data: Imovie | undefined
+  @Input() routerLink: string = ''
+  @Input() imageSource: string = ''
+
+
 
 }
