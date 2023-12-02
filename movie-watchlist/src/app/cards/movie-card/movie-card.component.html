@@ -1,7 +1,12 @@
-<div class="card" >
+<div
+  class="container-fluid card mb-5 mt-5 col-sm-4 col-md-6"
+  style="width: 300px"
+>
   <img [src]="imageSource" class="card-img-top" alt="movie-picture" />
   <div class="card-body">
-    <Label class="title"> {{ data?.title }}</Label>
+    <div>
+      <Label class="title"> {{ data?.title }}</Label>
+    </div>
 
     <Label class="label"> Description </Label>
     <p class="card-text">{{ data?.description }}</p>

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Imovie } from '../model/movie-model';
+import { Imovie } from '../../model/movie-model';
 import { Router } from '@angular/router';
 
 @Component({
