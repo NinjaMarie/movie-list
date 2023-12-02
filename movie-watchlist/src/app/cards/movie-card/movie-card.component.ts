@@ -11,7 +11,4 @@ export class MovieCardComponent {
   @Input() data: Imovie | undefined
   @Input() routerLink: string = ''
   @Input() imageSource: string = ''
-
-
-
 }

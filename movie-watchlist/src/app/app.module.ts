@@ -8,6 +8,7 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 import { AvengersMoviePageComponent } from './pages/avengers-movie-page/avengers-movie-page.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DetailCardComponent } from './cards/detail-card/detail-card.component';
+import { MovieDetailPageComponent } from './pages/movie-detail-page/movie-detail-page.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { DetailCardComponent } from './cards/detail-card/detail-card.component';
     LandingPageComponent,
     AvengersMoviePageComponent,
     DetailCardComponent,
+    MovieDetailPageComponent,
   ],
   imports: [
     BrowserModule,

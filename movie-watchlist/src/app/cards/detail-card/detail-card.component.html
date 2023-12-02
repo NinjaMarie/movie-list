@@ -1,35 +1,47 @@
-<div class="container-fluid margin:5px">
-  <div class="dark-bg">
+<div class="container-fluid">
+  <div class="containerFluid dark-bg">
     <div class="column">
-        <h1 class="title mb-2 text-white">Tenet</h1>
-        <div class="row margin:5px">
-          <div class="video-container col-sm-6 mb-5">
-            <iframe
-              width="900"
-              height="500"
-              src="https://www.youtube.com/embed/LdOM0x0XDMo"
-              type="video/mp4"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="col-sm-6 mb-5">
-            <p class="text-white">
-              Armed with only one word, Tenet, and fighting for the survival of the
-              entire world, a Protagonist journeys through a twilight world of
-              international espionage on a mission that will unfold in something
-              beyond real time.
-            </p>
-            <img
-              style="width: 200px"
-              src="assets/pictures/Tenet.png"
-              alt="tenet-image"
-            />
-            <div class="mt-2">
-              <button class="btn btn-outline-danger" (click)="onClicked()">Add to Watch List</button>
-            </div>
+      <h1 class="title mb-2 text-white">{{ data?.title }}</h1>
+      <div class="row margin:5px">
+        <div class="video-container col-sm-6 mb-5">
+          <iframe
+            width="900"
+            height="500"
+            [src]="sanitizedVideoUrl"
+            type="video/mp4"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="col-sm-6 mb-5">
+          <Label class="label"> Description:</Label>
+          <p class="text-white">
+            {{ data?.description }}
+          </p>
+          <Label class="label"> Genre:</Label>
+          <p class="text-white">
+            {{ data?.genre }}
+          </p>
+          <Label class="label"> Rating:</Label>
+          <p class="text-white">
+            {{ data?.rating }}
+          </p>
+          <Label class="label"> Released Date:</Label>
+          <p class="text-white">
+            {{ data?.releasedDate }}
+          </p>
+          <Label class="label"> Duration:</Label>
+          <p class="text-white">
+            {{ data?.duration }}
+          </p>
+          <img style="width: 200px" [src]="imageSource" [alt]="imageAlt" />
+          <div class="mt-2">
+            <button class="btn btn-outline-danger" (click)="onClicked()">
+              Add to Watch List
+            </button>
           </div>
         </div>
       </div>
+    </div>
   </div>
 </div>
