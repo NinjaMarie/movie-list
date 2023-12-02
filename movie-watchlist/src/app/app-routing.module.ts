@@ -9,7 +9,7 @@ import { MovieDetailPageComponent } from './pages/movie-detail-page/movie-detail
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'avengers', component: AvengersMoviePageComponent },
-  { path: 'movie-detail', component: MovieDetailPageComponent },
+  { path: 'movie-detail/:id', component: MovieDetailPageComponent },
 ];
 
 @NgModule({

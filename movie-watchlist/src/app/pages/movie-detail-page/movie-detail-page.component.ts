@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TRAILER_LINK } from 'src/app/constants';
+import { ActivatedRoute } from '@angular/router';
 import { mockDetailData } from 'src/app/mockData/mock-detail-data';
 import { IDetail } from 'src/app/model/detail-model';
 
@@ -9,10 +9,19 @@ import { IDetail } from 'src/app/model/detail-model';
   styleUrls: ['./movie-detail-page.component.css'],
 })
 export class MovieDetailPageComponent implements OnInit {
+  movieId: number | undefined;
   detailData: IDetail | undefined;
-  videoUrl: string = 'https://www.youtube.com/embed/LdOM0x0XDMo';
+  avengersVideoUrl: string = 'https://www.youtube.com/embed/tmeOjFno6Do';
+  guardiansVideoUrl: string = 'https://www.youtube.com/embed/d96cjJhvlMA';
+  knivesVideoUrl: string = 'https://www.youtube.com/embed/qGqiHJTsRkQ';
+  spiderManVideoUrl: string = 'https://www.youtube.com/embed/tg52up16eq0';
+  tenetVideoUrl: string = 'https://www.youtube.com/embed/LdOM0x0XDMo';
+
+  constructor(private route: ActivatedRoute) {}
   ngOnInit(): void {
     this.detailData = mockDetailData;
-    console.log('DATA HERE', mockDetailData);
+    this.route.params.subscribe((params) => {
+      this.movieId = +params['id'];
+    });
   }
 }

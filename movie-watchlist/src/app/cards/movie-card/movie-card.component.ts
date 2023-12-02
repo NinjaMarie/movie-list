@@ -5,10 +5,14 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
-  styleUrls: ['./movie-card.component.css']
+  styleUrls: ['./movie-card.component.css'],
 })
 export class MovieCardComponent {
-  @Input() data: Imovie | undefined
-  @Input() routerLink: string = ''
-  @Input() imageSource: string = ''
+  @Input() data: Imovie | undefined;
+  @Input() movieId: number | undefined;
+  @Input() imageSource: string = '';
+
+  get routerLink(): any {
+    return ['/movie-detail', this.movieId];
+  }
 }

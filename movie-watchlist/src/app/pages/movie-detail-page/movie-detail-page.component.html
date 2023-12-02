@@ -1,10 +1,40 @@
-
 <app-detail-card
+  *ngIf="movieId === 1"
   [data]="detailData"
-  [iframeSource]="videoUrl"
+  [iframeSource]="avengersVideoUrl"
+  [imageSource]="'assets/pictures/Avengers.png'"
+  [imageAlt]="'tenet-movie-image'"
+>
+</app-detail-card>
+<app-detail-card
+  *ngIf="movieId === 2"
+  [data]="detailData"
+  [iframeSource]="guardiansVideoUrl"
+  [imageSource]="'assets/pictures/Guardians of The Galaxy.png'"
+  [imageAlt]="'tenet-movie-image'"
+>
+</app-detail-card>
+<app-detail-card
+  *ngIf="movieId === 3"
+  [data]="detailData"
+  [iframeSource]="knivesVideoUrl"
+  [imageSource]="'assets/pictures/Knives Out.png'"
+  [imageAlt]="'tenet-movie-image'"
+>
+</app-detail-card>
+<app-detail-card
+  *ngIf="movieId === 4"
+  [data]="detailData"
+  [iframeSource]="spiderManVideoUrl"
+  [imageSource]="'assets/pictures/Spider Man.png'"
+  [imageAlt]="'tenet-movie-image'"
+>
+</app-detail-card>
+<app-detail-card
+  *ngIf="movieId === 5"
+  [data]="detailData"
+  [iframeSource]="tenetVideoUrl"
   [imageSource]="'assets/pictures/Tenet.png'"
   [imageAlt]="'tenet-movie-image'"
 >
 </app-detail-card>
-
-
