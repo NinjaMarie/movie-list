@@ -9,7 +9,7 @@
       <app-movie-card
         [movieId]="1"
         [imageSource]="'assets/pictures/Avengers.png'"
-        [data]="movieData"
+        [data]="movieData?.avengers"
       ></app-movie-card>
     </div>
 
@@ -17,7 +17,7 @@
       <app-movie-card
         [movieId]="2"
         [imageSource]="'assets/pictures/Guardians of The Galaxy.png'"
-        [data]="movieData"
+        [data]="movieData?.guardiansOfTheGalaxy"
       ></app-movie-card>
     </div>
 
@@ -25,7 +25,7 @@
       <app-movie-card
         [movieId]="3"
         [imageSource]="'assets/pictures/Knives Out.png'"
-        [data]="movieData"
+        [data]="movieData?.knivesOut"
       ></app-movie-card>
     </div>
 
@@ -33,7 +33,7 @@
       <app-movie-card
         [movieId]="4"
         [imageSource]="'assets/pictures/Spider Man.png'"
-        [data]="movieData"
+        [data]="movieData?.spiderMan"
       ></app-movie-card>
     </div>
 
@@ -41,7 +41,7 @@
       <app-movie-card
         [movieId]="5"
         [imageSource]="'assets/pictures/Tenet.png'"
-        [data]="movieData"
+        [data]="movieData?.tenet"
       ></app-movie-card>
     </div>
     <div class="container-fluid card mt-5" style="width: 300px">

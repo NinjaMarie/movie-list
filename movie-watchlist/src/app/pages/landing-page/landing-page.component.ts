@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { mockMovieData } from 'src/app/mockData/mock-movie-data';
+import {
+  mockMovieCardsData,
+  mockMovieData,
+} from 'src/app/mockData/mock-movie-data';
 import { mockMovieList } from 'src/app/mockData/mock-movieList-data';
 import { Imovie } from 'src/app/model/movie-model';
+import { ImovieCard } from 'src/app/model/movieCards-model';
 import { IMovieList } from 'src/app/model/movieList-model';
 
 @Component({
@@ -10,10 +14,10 @@ import { IMovieList } from 'src/app/model/movieList-model';
   styleUrls: ['./landing-page.component.css'],
 })
 export class LandingPageComponent implements OnInit {
-  movieData: Imovie | undefined;
+  movieData: ImovieCard | undefined;
   movieListData: IMovieList[] = [];
   ngOnInit(): void {
-    this.movieData = mockMovieData;
+    this.movieData = mockMovieCardsData;
     this.movieListData = mockMovieList;
   }
 
