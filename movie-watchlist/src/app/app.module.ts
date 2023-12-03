@@ -9,6 +9,7 @@ import { AvengersMoviePageComponent } from './pages/avengers-movie-page/avengers
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DetailCardComponent } from './cards/detail-card/detail-card.component';
 import { MovieDetailPageComponent } from './pages/movie-detail-page/movie-detail-page.component';
+import { MovieListCardComponent } from './cards/movie-list-card/movie-list-card.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MovieDetailPageComponent } from './pages/movie-detail-page/movie-detail
     AvengersMoviePageComponent,
     DetailCardComponent,
     MovieDetailPageComponent,
+    MovieListCardComponent,
   ],
   imports: [
     BrowserModule,

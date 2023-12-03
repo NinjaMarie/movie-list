@@ -3,7 +3,7 @@
     <span class="navbar-brand mb-0 h1">Movie Night</span>
   </div>
 </nav>
-<div class="containerFluid bg-dark">
+<div class="containerFluid bg-dark margin:5">
   <div class="row margin:5px">
     <div class="col-sm-2 text-white">
       <app-movie-card
@@ -46,56 +46,32 @@
     </div>
     <div class="container-fluid card mt-5" style="width: 300px">
       <div class="mt-2 col-sm-12 text-white">
-        <div class="text-black">
-          <h1>Movie List</h1>
+        <nav class="navbar bg-body-tertiary">
+          <div class="container-fluid">
+            <img
+              src="assets/pictures/movie.png"
+              alt="Logo"
+              width="30"
+              height="24"
+              class="d-inline-block align-text-top"
+            />
+            <label class="navbar-brand label"> Movie list </label>
+          </div>
+        </nav>
+        <div class="mt-2 mb-2">
+          <button class="btn btn-dark mb-2" (click)="sort('title')">
+            Sort by Title
+          </button>
+          <button class="btn btn-dark" (click)="sort('releaseDate')">
+            Sort by Released Date
+          </button>
         </div>
-        <ol class="list-group list-group">
-          <li
-            class="list-group-item d-flex justify-content-between align-items-start"
-          >
-            <div class="ms-2 me-auto">
-              <div class="fw-bold">Avengers</div>
-              Adventure , Action, Sci-Fi
-            </div>
-            <span class="badge bg-primary rounded-pill">Top 1</span>
-          </li>
-          <li
-            class="list-group-item d-flex justify-content-between align-items-start"
-          >
-            <div class="ms-2 me-auto">
-              <div class="fw-bold">Guardian of The Galaxy</div>
-              Action, Adventure, Comedy
-            </div>
-            <span class="badge bg-primary rounded-pill">Top 2</span>
-          </li>
-          <li
-            class="list-group-item d-flex justify-content-between align-items-start"
-          >
-            <div class="ms-2 me-auto">
-              <div class="fw-bold">Knives Out</div>
-              Comedy, Crime, Drama
-            </div>
-            <span class="badge bg-primary rounded-pill">Top 3</span>
-          </li>
-          <li
-            class="list-group-item d-flex justify-content-between align-items-start"
-          >
-            <div class="ms-2 me-auto">
-              <div class="fw-bold">Tenet</div>
-              Action, Sci-Fi
-            </div>
-            <span class="badge bg-primary rounded-pill">Top 4</span>
-          </li>
-          <li
-            class="list-group-item d-flex justify-content-between align-items-start"
-          >
-            <div class="ms-2 me-auto">
-              <div class="fw-bold">Spider-Man</div>
-              Action, Animation, Adventure
-            </div>
-            <span class="badge bg-primary rounded-pill">Top 5</span>
-          </li>
-        </ol>
+        <app-movie-list-card
+          *ngFor="let movieListData of movieListData"
+          [data]="movieListData"
+          [movieId]="movieListData.movieId"
+        >
+        </app-movie-list-card>
       </div>
     </div>
   </div>
