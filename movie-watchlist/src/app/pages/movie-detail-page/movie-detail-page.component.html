@@ -1,6 +1,6 @@
 <app-detail-card
   *ngIf="movieId === 1"
-  [data]="detailData"
+  [data]="detailData?.avengers"
   [iframeSource]="avengersVideoUrl"
   [imageSource]="'assets/pictures/Avengers.png'"
   [imageAlt]="'tenet-movie-image'"
@@ -8,7 +8,7 @@
 </app-detail-card>
 <app-detail-card
   *ngIf="movieId === 2"
-  [data]="detailData"
+  [data]="detailData?.guardiansOfTheGalaxy"
   [iframeSource]="guardiansVideoUrl"
   [imageSource]="'assets/pictures/Guardians of The Galaxy.png'"
   [imageAlt]="'tenet-movie-image'"
@@ -16,7 +16,7 @@
 </app-detail-card>
 <app-detail-card
   *ngIf="movieId === 3"
-  [data]="detailData"
+  [data]="detailData?.knivesOut"
   [iframeSource]="knivesVideoUrl"
   [imageSource]="'assets/pictures/Knives Out.png'"
   [imageAlt]="'tenet-movie-image'"
@@ -24,7 +24,7 @@
 </app-detail-card>
 <app-detail-card
   *ngIf="movieId === 4"
-  [data]="detailData"
+  [data]="detailData?.spiderMan"
   [iframeSource]="spiderManVideoUrl"
   [imageSource]="'assets/pictures/Spider Man.png'"
   [imageAlt]="'tenet-movie-image'"
@@ -32,7 +32,7 @@
 </app-detail-card>
 <app-detail-card
   *ngIf="movieId === 5"
-  [data]="detailData"
+  [data]="detailData?.tenet"
   [iframeSource]="tenetVideoUrl"
   [imageSource]="'assets/pictures/Tenet.png'"
   [imageAlt]="'tenet-movie-image'"
