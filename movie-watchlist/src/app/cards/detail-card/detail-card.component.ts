@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { IDetail } from 'src/app/model/detail-model';
 
@@ -8,6 +8,7 @@ import { IDetail } from 'src/app/model/detail-model';
   styleUrls: ['./detail-card.component.css'],
 })
 export class DetailCardComponent {
+  @Output() addToWatchList: EventEmitter<void> = new EventEmitter<void>();
   @Input() data: IDetail | undefined;
   @Input() imageSource: string = '';
   @Input() imageAlt: string = '';
@@ -19,7 +20,7 @@ export class DetailCardComponent {
   sanitizedVideoUrl: SafeResourceUrl = '';
   constructor(private sanitizer: DomSanitizer) {}
 
-  onClicked() {
-    alert('Added to Watch List');
+  handleButtonClick(): void {
+    this.addToWatchList.emit();
   }
 }

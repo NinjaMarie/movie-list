@@ -6,6 +6,7 @@ import {
 } from 'src/app/mockData/mock-detail-data';
 import { IDetail } from 'src/app/model/detail-model';
 import { IDetailCard } from 'src/app/model/detailCard-model';
+import { WatchListService } from 'src/app/services/watch-list.service';
 
 @Component({
   selector: 'app-movie-detail-page',
@@ -13,7 +14,8 @@ import { IDetailCard } from 'src/app/model/detailCard-model';
   styleUrls: ['./movie-detail-page.component.css'],
 })
 export class MovieDetailPageComponent implements OnInit {
-  movieId: number | undefined;
+  watchListCount: number | undefined;
+  movieId!: number;
   detailData: IDetailCard | undefined;
   avengersVideoUrl: string = 'https://www.youtube.com/embed/tmeOjFno6Do';
   guardiansVideoUrl: string = 'https://www.youtube.com/embed/d96cjJhvlMA';
@@ -21,7 +23,10 @@ export class MovieDetailPageComponent implements OnInit {
   spiderManVideoUrl: string = 'https://www.youtube.com/embed/tg52up16eq0';
   tenetVideoUrl: string = 'https://www.youtube.com/embed/LdOM0x0XDMo';
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private watchListService: WatchListService
+  ) {}
   ngOnInit(): void {
     this.createSubscription();
     this.routeDetailPages();
@@ -29,6 +34,17 @@ export class MovieDetailPageComponent implements OnInit {
 
   createSubscription() {
     this.detailData = mockDetailCardData;
+  }
+
+  handleAddToWatchList(): void {
+    alert('Added to WatchList');
+    this.watchListService.addToWatchList(this.movieId);
+
+    this.watchListService
+      .getWatchList()
+      .subscribe((watchList: { size: number | undefined }) => {
+        this.watchListCount = watchList.size;
+      });
   }
 
   routeDetailPages() {

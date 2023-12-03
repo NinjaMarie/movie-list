@@ -1,16 +1,16 @@
 .label {
-    font-weight: bold;
-    font-style: italic;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .title {
-    font-style: normal;
-    font-weight: bolder;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: larger;
+  font-style: normal;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  font-size: larger;
 }
 
 .description {
-    font-style: normal;
-    font-weight: 100;
+  font-style: normal;
+  font-weight: 100;
 }

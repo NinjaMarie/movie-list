@@ -1,0 +1,16 @@
+<nav class="navbar containerFluid bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="''">
+      <div>
+        <h1 class="text-white">Movie Night</h1>
+      </div>
+    </a>
+  </div>
+</nav>
+
+<app-watch-list-card
+  *ngFor="let movie of watchListWithDetails$ | async"
+  [data]="movie"
+  [imageSource]="'assets/pictures/Avengers.png'"
+  (removeButtonClicked)="onRemoveClicked()"
+></app-watch-list-card>

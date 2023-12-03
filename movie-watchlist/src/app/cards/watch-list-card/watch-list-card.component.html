@@ -1,0 +1,17 @@
+<div class="container-fluid mt-5 mb-5 margin-left: margin-right:5">
+  <div class="card" style="width: 18rem">
+    <img [src]="imageSource" class="card-img-top" alt="movie-image" />
+    <div class="card-body">
+      <h5 class="card-title">{{ data?.title }}</h5>
+      <p class="card-text">
+        {{ data?.description }}
+      </p>
+      <button routerLink="" class="btn btn-outline-primary mb-2">
+        Go Back to Movie Page
+      </button>
+      <button class="btn btn-danger" (click)="handleRemoveButton()">
+        Remove From Watch List
+      </button>
+    </div>
+  </div>
+</div>
