@@ -13,8 +13,7 @@ export class LandingPageComponent implements OnInit {
   movieData: ImovieCard | undefined;
   movieListData: IMovieList[] = [];
   ngOnInit(): void {
-    this.movieData = mockMovieCardsData;
-    this.movieListData = mockMovieList;
+    this.createSubscription();
   }
 
   sortList(property: string): void {
@@ -22,7 +21,9 @@ export class LandingPageComponent implements OnInit {
       title[property] > releasesDate[property] ? 1 : -1
     );
   }
-  // sortCard(property: string): void {
-  //   this.movieData.sort((a, b) => (a[property] > b[property] ? 1 : -1));
-  // }
+
+  createSubscription() {
+    this.movieData = mockMovieCardsData;
+    this.movieListData = mockMovieList;
+  }
 }

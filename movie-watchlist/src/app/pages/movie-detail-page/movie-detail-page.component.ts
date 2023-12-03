@@ -23,7 +23,15 @@ export class MovieDetailPageComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) {}
   ngOnInit(): void {
+    this.createSubscription();
+    this.routeDetailPages();
+  }
+
+  createSubscription() {
     this.detailData = mockDetailCardData;
+  }
+
+  routeDetailPages() {
     this.route.params.subscribe((params) => {
       this.movieId = +params['id'];
     });
