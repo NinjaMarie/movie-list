@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100ch;
+}
+button {
+  font-family: "Nunito Sans";
+}
+h1 {
+  font-size: 7.5em;
+  margin: 15px 0px;
+  font-weight: bold;
+  text-align: center;
+}
+h2 {
+  font-weight: bold;
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  body {
+    display: block;
+  }
+  .container {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+}

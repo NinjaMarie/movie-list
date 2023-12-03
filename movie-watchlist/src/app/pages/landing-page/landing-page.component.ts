@@ -17,7 +17,12 @@ export class LandingPageComponent implements OnInit {
     this.movieListData = mockMovieList;
   }
 
-  sort(property: string): void {
-    this.movieListData.sort((a, b) => (a[property] > b[property] ? 1 : -1));
+  sortList(property: string): void {
+    this.movieListData.sort((title, releasesDate) =>
+      title[property] > releasesDate[property] ? 1 : -1
+    );
   }
+  // sortCard(property: string): void {
+  //   this.movieData.sort((a, b) => (a[property] > b[property] ? 1 : -1));
+  // }
 }

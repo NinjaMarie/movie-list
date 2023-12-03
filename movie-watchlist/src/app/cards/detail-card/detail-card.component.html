@@ -1,7 +1,7 @@
 <div class="container-fluid">
-  <div class="containerFluid dark-bg">
+  <div class="containerFluid">
     <div class="column">
-      <h1 class="title mb-2 text-white">{{ data?.title }}</h1>
+      <h1 class="title mb-2">{{ data?.title }}</h1>
       <div class="row margin:5px">
         <div class="video-container col-sm-6 mb-5">
           <iframe
@@ -15,23 +15,23 @@
         </div>
         <div class="col-sm-6 mb-5">
           <Label class="label"> Description:</Label>
-          <p class="text-white">
+          <p>
             {{ data?.description }}
           </p>
           <Label class="label"> Genre:</Label>
-          <p class="text-white">
+          <p>
             {{ data?.genre }}
           </p>
           <Label class="label"> Rating:</Label>
-          <p class="text-white">
+          <p>
             {{ data?.rating }}
           </p>
           <Label class="label"> Released Date:</Label>
-          <p class="text-white">
+          <p>
             {{ data?.releasedDate }}
           </p>
           <Label class="label"> Duration:</Label>
-          <p class="text-white">
+          <p>
             {{ data?.duration }}
           </p>
           <img style="width: 200px" [src]="imageSource" [alt]="imageAlt" />

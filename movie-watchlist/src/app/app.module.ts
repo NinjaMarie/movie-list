@@ -9,6 +9,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { DetailCardComponent } from './cards/detail-card/detail-card.component';
 import { MovieDetailPageComponent } from './pages/movie-detail-page/movie-detail-page.component';
 import { MovieListCardComponent } from './cards/movie-list-card/movie-list-card.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MovieListCardComponent } from './cards/movie-list-card/movie-list-card.
     DetailCardComponent,
     MovieDetailPageComponent,
     MovieListCardComponent,
+    PageNotFoundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FlexLayoutModule],
   providers: [],
