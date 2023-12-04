@@ -1,13 +1,25 @@
 <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" [routerLink]="''">
-      <div>
-        <h1 class="text-white">Movie Night</h1>
-      </div>
-    </a>
+      <h1 class="text-white">Movie Night</h1></a
+    >
+    <div class="d-flex" role="search">
+      <button class="btn btn-outline-dark">
+        <h4 class="fw-bold text-white" routerLink="watch-list">
+          <img
+            src="assets/pictures/movie.png"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          My Watch List
+        </h4>
+      </button>
+    </div>
   </div>
 </nav>
-<div class="containerFluid bg-dark margin-left:2 margin-right:2">
+<div class="container-fluid bg-dark margin-left:2 margin-right:2">
   <div class="row margin-left:2 margin-right:2">
     <div class="col-sm-2 text-white">
       <app-movie-card
@@ -52,21 +64,12 @@
       <div class="mt-2 col-sm-12 text-white">
         <nav class="navbar bg-dark">
           <div class="container-fluid">
-            <img
-              src="assets/pictures/movie.png"
-              alt="Logo"
-              width="30"
-              height="24"
-              class="d-inline-block align-text-top"
-            />
-            <label class="navbar-brand label text-white fw-bold">
-              Movie list
-            </label>
+            <label class="navbar-brand text-white fw-bold"> Movie list </label>
           </div>
         </nav>
         <div class="mt-2 mb-2">
           <button class="btn btn-dark mb-2" (click)="sortList('title')">
-            Sort by Title
+            Sort by Title [A-Z]
           </button>
           <button class="btn btn-dark" (click)="sortList('releasedDate')">
             Sort by Released Date

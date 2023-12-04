@@ -7,10 +7,16 @@
     </a>
   </div>
 </nav>
-
-<app-watch-list-card
-  *ngFor="let movie of watchListWithDetails$ | async"
-  [data]="movie"
-  [imageSource]="'assets/pictures/Avengers.png'"
-  (removeButtonClicked)="onRemoveClicked()"
-></app-watch-list-card>
+<div class="container-fluid">
+  <div class="row">
+    <ng-container *ngFor="let movie of watchListWithDetails$ | async">
+      <div class="col-sm-2">
+        <app-watch-list-card
+          [data]="movie"
+          [imageSource]="'assets/pictures/Avengers.png'"
+          (removeButtonClicked)="onRemoveClicked()"
+        ></app-watch-list-card>
+      </div>
+    </ng-container>
+  </div>
+</div>

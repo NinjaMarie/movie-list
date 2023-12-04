@@ -1,19 +1,24 @@
-<nav class="navbar containerFluid bg-dark">
+<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" [routerLink]="''">
-      <div>
-        <h1 class="text-white">Movie Night</h1>
-      </div>
-    </a>
+      <h1 class="text-white">Movie Night</h1></a
+    >
+    <div class="d-flex" role="search">
+      <button class="btn btn-outline-dark">
+        <h4 class="fw-bold text-white" routerLink="watch-list">
+          <img
+            src="assets/pictures/movie.png"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          My Watch List
+        </h4>
+      </button>
+    </div>
   </div>
 </nav>
-<div class="container-fluid mt-2 mb-2">
-  <button class="btn btn-outline-dark">
-    <h4 class="fw-bold" routerLink="watch-list">
-      Watch List: {{ watchListCount }}
-    </h4>
-  </button>
-</div>
 <app-detail-card
   *ngIf="movieId === 1"
   [data]="detailData?.avengers"
