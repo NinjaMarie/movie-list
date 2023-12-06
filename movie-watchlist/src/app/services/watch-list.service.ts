@@ -30,8 +30,8 @@ export class WatchListService {
   getMovieDetails(movieId: number): Observable<IWatchList> {
     return of({
       movieId: movieId,
-      title: 'Movie ${movieId}',
-      description: 'Description for Movie ${movieId}',
+      title: `Movie ${movieId}`,
+      description: `Description for Movie ${movieId}`,
     });
   }
 }
